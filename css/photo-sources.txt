@@ -1,0 +1,132 @@
+Which original engagement photo each website image came from
+(originals are in the Portrait / Landscape folders next to this website folder)
+
+hero.jpg	<- 1 (43).JPG	2400x1642	608 KB
+our-story.jpg	<- 1 (5).JPG	1043x1400	108 KB
+rsvp.jpg	<- 1 (129).JPG	958x1400	142 KB
+gallery/full/01.jpg	<- 1 (33).JPG	1800x1217	253 KB
+gallery/thumb/01.jpg	<- 1 (33).JPG	720x487	53 KB
+gallery/full/02.jpg	<- 1 (10).JPG	1385x1800	292 KB
+gallery/thumb/02.jpg	<- 1 (10).JPG	554x720	57 KB
+gallery/full/03.jpg	<- 1 (57).JPG	1800x1203	257 KB
+gallery/thumb/03.jpg	<- 1 (57).JPG	720x481	54 KB
+gallery/full/04.jpg	<- 1 (19).JPG	1248x1800	418 KB
+gallery/thumb/04.jpg	<- 1 (19).JPG	499x720	82 KB
+gallery/full/05.jpg	<- 1 (81).JPG	1800x1201	203 KB
+gallery/thumb/05.jpg	<- 1 (81).JPG	720x480	42 KB
+gallery/full/06.jpg	<- 1 (100).JPG	1353x1800	348 KB
+gallery/thumb/06.jpg	<- 1 (100).JPG	541x720	59 KB
+gallery/full/07.jpg	<- 1 (1).JPG	1800x1195	374 KB
+gallery/thumb/07.jpg	<- 1 (1).JPG	720x478	74 KB
+gallery/full/08.jpg	<- 1 (2).JPG	1310x1800	348 KB
+gallery/thumb/08.jpg	<- 1 (2).JPG	524x720	71 KB
+gallery/full/09.jpg	<- 1 (4).JPG	1800x1155	135 KB
+gallery/thumb/09.jpg	<- 1 (4).JPG	720x462	31 KB
+gallery/full/10.jpg	<- 1 (6).JPG	1312x1800	129 KB
+gallery/thumb/10.jpg	<- 1 (6).JPG	525x720	31 KB
+gallery/full/11.jpg	<- 1 (8).JPG	1800x1152	231 KB
+gallery/thumb/11.jpg	<- 1 (8).JPG	720x461	51 KB
+gallery/full/12.jpg	<- 1 (13).JPG	1321x1800	218 KB
+gallery/thumb/12.jpg	<- 1 (13).JPG	529x720	47 KB
+gallery/full/13.jpg	<- 1 (23).JPG	1800x1213	381 KB
+gallery/thumb/13.jpg	<- 1 (23).JPG	720x485	73 KB
+gallery/full/14.jpg	<- 1 (26).JPG	1260x1800	314 KB
+gallery/thumb/14.jpg	<- 1 (26).JPG	504x720	63 KB
+gallery/full/15.jpg	<- 1 (28).JPG	1800x1201	330 KB
+gallery/thumb/15.jpg	<- 1 (28).JPG	720x480	68 KB
+gallery/full/16.jpg	<- 1 (34).JPG	1800x1169	251 KB
+gallery/thumb/16.jpg	<- 1 (34).JPG	720x468	54 KB
+gallery/full/17.jpg	<- 1 (36).JPG	1267x1800	346 KB
+gallery/thumb/17.jpg	<- 1 (36).JPG	507x720	72 KB
+gallery/full/18.jpg	<- 1 (42).JPG	1255x1800	367 KB
+gallery/thumb/18.jpg	<- 1 (42).JPG	502x720	74 KB
+gallery/full/19.jpg	<- 1 (44).JPG	1201x1800	666 KB
+gallery/thumb/19.jpg	<- 1 (44).JPG	480x720	104 KB
+gallery/full/20.jpg	<- 1 (51).JPG	1235x1800	264 KB
+gallery/thumb/20.jpg	<- 1 (51).JPG	494x720	56 KB
+gallery/full/21.jpg	<- 1 (52).JPG	1800x1174	264 KB
+gallery/thumb/21.jpg	<- 1 (52).JPG	720x470	58 KB
+gallery/full/22.jpg	<- 1 (59).JPG	1349x1800	315 KB
+gallery/thumb/22.jpg	<- 1 (59).JPG	539x720	56 KB
+gallery/full/23.jpg	<- 1 (62).JPG	1282x1800	244 KB
+gallery/thumb/23.jpg	<- 1 (62).JPG	513x720	49 KB
+gallery/full/24.jpg	<- 1 (63).JPG	1800x1176	343 KB
+gallery/thumb/24.jpg	<- 1 (63).JPG	720x470	68 KB
+gallery/full/25.jpg	<- 1 (65).JPG	1286x1800	287 KB
+gallery/thumb/25.jpg	<- 1 (65).JPG	515x720	55 KB
+gallery/full/26.jpg	<- 1 (74).JPG	1800x1201	556 KB
+gallery/thumb/26.jpg	<- 1 (74).JPG	720x480	89 KB
+gallery/full/27.jpg	<- 1 (78).JPG	1322x1800	250 KB
+gallery/thumb/27.jpg	<- 1 (78).JPG	529x720	49 KB
+gallery/full/28.jpg	<- 1 (115).JPG	1280x1800	248 KB
+gallery/thumb/28.jpg	<- 1 (115).JPG	512x720	48 KB
+gallery/full/29.jpg	<- 1 (119).JPG	1800x1177	476 KB
+gallery/thumb/29.jpg	<- 1 (119).JPG	720x471	90 KB
+gallery/full/30.jpg	<- 1 (132).JPG	1800x1219	198 KB
+gallery/thumb/30.jpg	<- 1 (132).JPG	720x488	43 KB
+gallery/full/31.jpg	<- 1 (135).JPG	1289x1800	208 KB
+gallery/thumb/31.jpg	<- 1 (135).JPG	516x720	44 KB
+gallery/full/32.jpg	<- 1 (137).JPG	1319x1800	348 KB
+gallery/thumb/32.jpg	<- 1 (137).JPG	528x720	74 KB
+gallery/full/33.jpg	<- 1 (146).JPG	1201x1800	326 KB
+gallery/thumb/33.jpg	<- 1 (146).JPG	480x720	70 KB
+gallery/full/34.jpg	<- 1 (156).JPG	1800x1201	345 KB
+gallery/thumb/34.jpg	<- 1 (156).JPG	720x480	70 KB
+gallery/full/35.jpg	<- 1 (157).JPG	1232x1800	317 KB
+gallery/thumb/35.jpg	<- 1 (157).JPG	493x720	68 KB
+gallery/full/36.jpg	<- 1 (169).JPG	1397x1800	439 KB
+gallery/thumb/36.jpg	<- 1 (169).JPG	559x720	78 KB
+gallery/full/37.jpg	<- 1 (171).JPG	1800x1201	357 KB
+gallery/thumb/37.jpg	<- 1 (171).JPG	720x480	69 KB
+
+Event and activity photos (free photos from unsplash.com, Unsplash License)
+event-day-tour.jpg	Taughannock Falls — Dawn Agran	https://unsplash.com/photos/a-waterfall-in-the-middle-of-a-forest-J7EgMPNwM5E
+event-welcome-dinner.jpg	Long dining table with flowers — M F	https://unsplash.com/photos/long-dining-table-with-festive-flowers-fb0_wj2MZk4
+event-brunch.jpg	Brunch table — Colin Michel	https://unsplash.com/photos/sliced-bread-with-green-vegetable-and-meat-on-white-ceramic-plate-rMXsuun3CuQ
+things/gorge.jpg	Waterfalls at Watkins Glen — Tyler Rutherford	https://unsplash.com/photos/water-falls-between-brown-rocky-mountain-during-daytime-M05pGulcIFI
+things/pier.jpg	Seneca Lake pier house, Watkins Glen — Carter Cortelyou	https://unsplash.com/photos/a-red-building-on-a-pier-Nr11pw9vhns
+things/vineyard.jpg	Grapes on the vine — Luke Hodde	https://unsplash.com/photos/blue-and-red-round-fruits-Jy6wIGmbGk0
+
+Fontainebleau Inn photos
+venue/inn-tent-dusk.jpg	The Inn and the tent at dusk (the photo Ahmed sent)
+event-wedding.jpg	smaller copy of venue/inn-tent-dusk.jpg
+venue/inn.jpg, venue/dining-hall.jpg, venue/lake.jpg	from fontainebleauinn.com, used with the Inn's OK
+
+Things To Do card photos (free photos from unsplash.com, Unsplash License; cropped to 800x533)
+Some set the mood rather than show the exact place (for example the restaurant and brewery cards).
+places/wgsp.jpg	Watkins Glen State Park — Julia A. Keirns	https://unsplash.com/photos/a-small-waterfall-in-the-middle-of-a-canyon-DL2cLy0lCw0
+places/harbor.jpg	Seneca Harbor Park & the Pier House — Rob Garay	https://unsplash.com/photos/a-group-of-sailboats-sit-in-a-harbor-wn0gpiRUx0w
+places/schooner.jpg	Schooner True Love — Ron Dauphin	https://unsplash.com/photos/white-and-brown-sailboat-_80Yw7o7hlo
+places/clute.jpg	Clute Park — Rob Garay	https://unsplash.com/photos/a-body-of-water-with-a-land-in-the-distance-LYk5eN-vCos
+places/taughannock.jpg	Taughannock Falls State Park — Manvir Singh	https://unsplash.com/photos/a-waterfall-with-a-man-standing-in-the-middle-of-it-spKPDBB7ODs
+places/treman.jpg	Robert H. Treman State Park — Gary Yost	https://unsplash.com/photos/a-small-waterfall-in-the-middle-of-a-forest-Py-6280RwKA
+places/buttermilk.jpg	Buttermilk Falls State Park — Martha Monjaras	https://unsplash.com/photos/a-narrow-gorge-with-a-stream-flowing-through-it-8sfiaM3QP_c
+places/ithacafalls.jpg	Ithaca Falls — Yakov Leonov	https://unsplash.com/photos/a-large-waterfall-with-water-cascading-down-its-sides-pWZFJfUKcJQ
+places/cascadilla.jpg	Cascadilla Gorge Trail — xin	https://unsplash.com/photos/a-waterfall-with-steps-leading-up-to-it-Re2cz17WItw
+places/shequaga.jpg	Shequaga Falls & Havana Glen — Jamie Melville	https://unsplash.com/photos/waterfall-scenery-cmgOF1EPRHA
+places/sugarhill.jpg	Sugar Hill fire tower — Henry Fraczek	https://unsplash.com/photos/fire-lookout-tower-in-forest-tqZPT-I4aJY
+places/cvt.jpg	Catharine Valley Trail — Ashlee Marie	https://unsplash.com/photos/a-dirt-road-next-to-a-river-surrounded-by-trees-kyO_PBOy0qs
+places/botanic.jpg	Cornell Botanic Gardens — Monique Caraballo	https://unsplash.com/photos/a-field-full-of-pink-flowers-with-a-building-in-the-background-D269kNRYxbs
+places/harborstation.jpg	Seneca Harbor Station — Anastase Maragos	https://unsplash.com/photos/dinner-by-the-sea-at-sunset-in-fira-rCJbHDChSXw
+places/jerlandos.jpg	Jerlando's Ristorante — Nik Owens	https://unsplash.com/photos/pizza-on-brown-wooden-table-40OJLYVWeeM
+places/revelry.jpg	Revelry Yards — Chang Hank	https://unsplash.com/photos/row-of-beer-taps-at-a-bar-jCbSVZU5DZs
+places/nickels.jpg	Nickel's Pit BBQ — Luis Santoyo	https://unsplash.com/photos/sliced-meat-on-brown-wooden-chopping-board-IePWXTF3-0Y
+places/moosewood.jpg	Moosewood — Anna Pelzer	https://unsplash.com/photos/bowl-of-vegetable-salads-IGfIGP5ONV0
+places/foodlab.jpg	Food Lab Bar + Kitchen — Daniel	https://unsplash.com/photos/two-glasses-of-different-types-of-drinks-on-a-bar-wUZbQhehzJQ
+places/dairy.jpg	Cornell Dairy Bar — ian dooley	https://unsplash.com/photos/strawberry-ice-cream-on-cone-TLD6iCOlyb0
+places/graft.jpg	Graft Wine + Cider Bar — Melissa Walker Horn	https://unsplash.com/photos/fruits-and-meats-on-white-ceramic-plate-beside-wine-glass-and-bottle-kBtP2IWiYSI
+places/twogoats.jpg	Two Goats Brewing — monica di loxley	https://unsplash.com/photos/clear-drinking-glass-with-brown-liquid-pJLmctCUmW0
+places/gristiron.jpg	Grist Iron Brewing — Phil Hearing	https://unsplash.com/photos/wooden-picnic-tables-on-a-sunny-grassy-lawn-Ee6GDykBVDI
+places/scalehouse.jpg	Scale House Brewery — Bohdan Stocek	https://unsplash.com/photos/a-row-of-beer-glasses-sitting-on-top-of-a-wooden-tray-vt0O0Av96R4
+places/atwater.jpg	Atwater Vineyards — Hector Uribe	https://unsplash.com/photos/wine-glass-sits-on-a-table-overlooking-a-vineyard-cde6dorxX3w
+places/leidenfrost.jpg	Leidenfrost Vineyards — Martin Katler	https://unsplash.com/photos/the-sun-is-setting-over-a-vineyard-with-vines--nWxUpRyxs0
+places/franklin.jpg	Franklin Street shops — Land O'Lakes, Inc.	https://unsplash.com/photos/small-town-street-at-dusk-with-american-flags-MjH55Ef3w_0
+places/commons.jpg	Ithaca Commons — Ty Finck	https://unsplash.com/photos/a-group-of-people-outside-of-a-building-UBJpFMHgeI0
+places/dewitt.jpg	DeWitt Mall — Christopher Stites	https://unsplash.com/photos/interior-view-of-a-bookstore-with-shelves-full-of-books-lUVOWdpPEW4
+places/mall.jpg	The Shops at Ithaca Mall — Iuliia Pilipeichenko	https://unsplash.com/photos/hand-holding-colorful-shopping-bags-against-a-light-background-uaWMyAIpF2g
+places/market.jpg	Ithaca Farmers Market — Shelley Pauls	https://unsplash.com/photos/fresh-vegetables-on-market-stall-Zaiuy5dKeCk
+places/glass.jpg	Corning Museum of Glass — Jan Canty	https://unsplash.com/photos/yellow-and-blue-ball-on-brown-wooden-fence-yr6t7kDhuuk
+places/rockwell.jpg	The Rockwell Museum — Andrew Neel	https://unsplash.com/photos/assorted-picture-frames-on-wall-acowe0pCVBg
+places/johnson.jpg	Johnson Museum of Art — Will Barkoff	https://unsplash.com/photos/aerial-view-of-city-during-daytime-OmBRi7irZeE
+places/earth.jpg	Museum of the Earth — David Clode	https://unsplash.com/photos/gray-and-black-fish-on-sand-L7CI8_VzqfE
+places/sciencenter.jpg	Sciencenter — Alex	https://unsplash.com/photos/three-assorted-color-liquid-filled-laboratory-apparatuses-yS3XM9qx3hQ
