@@ -7,7 +7,7 @@
   <meta name="description" content="Briana &amp; Ahmed are getting married on September 4, 2027 at the Fontainebleau Inn in Alpine, NY.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext x='3' y='26' font-size='28' fill='%23C29133'%3E%E2%99%A5%EF%B8%8E%3C/text%3E%3C/svg%3E">
   <link rel="preload" href="fonts/great-vibes-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/style.css?v=8d">
+  <link rel="stylesheet" href="css/style.css?v=13">
 </head>
 <body>
   <header class="site-header">
@@ -31,8 +31,12 @@
         <a href="registry.html">Registry</a>
         <a class="nav-rsvp" href="rsvp.html" aria-current="page">RSVP</a>
         <a class="nav-faq" href="faq.html">FAQ</a>
+        <a class="nav-faq" href="contact.html">Contact</a>
       </nav>
-      <a class="faq-link" href="faq.html">FAQ</a>
+      <div class="top-links">
+        <a class="faq-link" href="faq.html">FAQ</a>
+        <a class="faq-link" href="contact.html">Contact</a>
+      </div>
     </div>
   </header>
   <main>
@@ -41,32 +45,49 @@
       <div>
         <h2>RSVP</h2>
         <p class="intro">We would be delighted to have you join us for our intimate celebration on Saturday, September 4, 2027. Please confirm your attendance by June 1, 2027.</p>
-        <form id="rsvp-form">
+        <form id="rsvp-form" novalidate>
+          <p class="step-note">Start with your name as it appears on your invitation.</p>
           <div class="field"><label for="first">First Name *</label><input id="first" name="first_name" type="text" placeholder="First name" autocomplete="given-name" required></div>
           <div class="field"><label for="last">Last Name *</label><input id="last" name="last_name" type="text" placeholder="Last name" autocomplete="family-name" required></div>
-          <div class="field"><label for="email">Email Address *</label><input id="email" name="email" type="email" placeholder="email@example.com" autocomplete="email" required></div>
-          <fieldset class="field">
-            <legend>Will You Be Attending? *</legend>
-            <label class="choice"><input type="radio" name="attending" value="Yes" required> Yes, I'll be there!</label>
-            <label class="choice"><input type="radio" name="attending" value="No"> Regretfully, no</label>
-          </fieldset>
-          <fieldset class="field">
-            <legend>Dietary Restrictions</legend>
-            <label class="choice"><input type="checkbox" name="dietary" value="No restrictions"> No restrictions</label>
-            <label class="choice"><input type="checkbox" name="dietary" value="Vegetarian/Vegan"> Vegetarian/Vegan</label>
-            <label class="choice"><input type="checkbox" name="dietary" value="Gluten-free"> Gluten-free</label>
-            <label class="choice"><input type="checkbox" name="dietary" value="Dairy-free"> Dairy-free</label>
-            <label class="choice"><input type="checkbox" name="dietary" value="Nut allergy"> Nut allergy</label>
-            <label class="choice"><input type="checkbox" name="dietary" value="Halal"> Halal</label>
-            <label class="choice"><input type="checkbox" name="dietary" value="Other"> Other</label>
-            <div class="other-box" id="dietary-other-box" hidden>
-              <label class="visually-hidden" for="dietary-other">Other dietary needs</label>
-              <div class="field" style="margin:4px 0 0"><input id="dietary-other" name="dietary_other" type="text" placeholder="Please tell us your dietary needs"></div>
-            </div>
-          </fieldset>
-          <div class="field"><label for="requests">Special Requests</label><textarea id="requests" name="requests" placeholder="Any additional messages for the couple..."></textarea></div>
-          <button class="btn" type="submit">Send RSVP</button>
-          <p class="form-status" id="rsvp-status" role="alert" hidden></p>
+          <button class="btn" type="button" id="find-btn">Continue</button>
+          <p class="form-status" id="find-status" role="alert" hidden></p>
+          <div id="rsvp-details" hidden>
+            <p class="rsvp-hello"><span id="rsvp-hello"></span> <button type="button" class="link-btn" id="change-name">Not you?</button></p>
+            <div class="field"><label for="email">Email Address *</label><input id="email" name="email" type="email" placeholder="email@example.com" autocomplete="email" required></div>
+            <fieldset class="field">
+              <legend>Will You Be Attending? *</legend>
+              <label class="choice"><input type="radio" name="attending" value="Yes" required> Yes, I'll be there!</label>
+              <label class="choice"><input type="radio" name="attending" value="No"> Regretfully, no</label>
+            </fieldset>
+            <fieldset class="field" id="plus-one-box" hidden>
+              <legend>Will You Bring a Guest? *</legend>
+              <p class="field-note">We&rsquo;ve saved a seat for a guest with you.</p>
+              <label class="choice"><input type="radio" name="plus_one" value="Yes"> Yes, I'll bring a guest</label>
+              <label class="choice"><input type="radio" name="plus_one" value="No"> No, just me</label>
+              <div class="plus-one-name" id="plus-one-name-box" hidden>
+                <div class="field"><label for="guest-first">Guest&rsquo;s First Name *</label><input id="guest-first" name="plus_one_first" type="text" autocomplete="off"></div>
+                <div class="field"><label for="guest-last">Guest&rsquo;s Last Name</label><input id="guest-last" name="plus_one_last" type="text" autocomplete="off"></div>
+                <div class="field"><label for="guest-diet">Guest&rsquo;s Dietary Needs</label><input id="guest-diet" name="plus_one_dietary" type="text" placeholder="Leave blank if none"></div>
+              </div>
+            </fieldset>
+            <fieldset class="field">
+              <legend>Dietary Restrictions</legend>
+              <label class="choice"><input type="checkbox" name="dietary" value="No restrictions"> No restrictions</label>
+              <label class="choice"><input type="checkbox" name="dietary" value="Vegetarian/Vegan"> Vegetarian/Vegan</label>
+              <label class="choice"><input type="checkbox" name="dietary" value="Gluten-free"> Gluten-free</label>
+              <label class="choice"><input type="checkbox" name="dietary" value="Dairy-free"> Dairy-free</label>
+              <label class="choice"><input type="checkbox" name="dietary" value="Nut allergy"> Nut allergy</label>
+              <label class="choice"><input type="checkbox" name="dietary" value="Halal"> Halal</label>
+              <label class="choice"><input type="checkbox" name="dietary" value="Other"> Other</label>
+              <div class="other-box" id="dietary-other-box" hidden>
+                <label class="visually-hidden" for="dietary-other">Other dietary needs</label>
+                <div class="field" style="margin:4px 0 0"><input id="dietary-other" name="dietary_other" type="text" placeholder="Please tell us your dietary needs"></div>
+              </div>
+            </fieldset>
+            <div class="field"><label for="requests">Special Requests</label><textarea id="requests" name="requests" placeholder="Any additional messages for the couple..."></textarea></div>
+            <button class="btn" type="submit" id="send-btn">Send RSVP</button>
+            <p class="form-status" id="rsvp-status" role="alert" hidden></p>
+          </div>
         </form>
       </div>
     </section>
@@ -76,6 +97,6 @@
     <p class="names">Briana &amp; Ahmed</p>
     <p>September 4, 2027 &middot; Fontainebleau Inn &middot; Alpine, NY</p>
   </footer>
-  <script src="js/rsvp.js?v=9"></script>
+  <script src="js/rsvp.js?v=13"></script>
 </body>
 </html>

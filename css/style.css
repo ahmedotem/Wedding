@@ -33,6 +33,10 @@
 html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header) + 12px); }
 body {
   margin: 0;
+  /* short pages: keep the footer at the bottom of the window */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background: var(--ivory);
   color: var(--plum);
   font-family: var(--sans);
@@ -40,6 +44,7 @@ body {
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
 }
+body > main { flex: 1 0 auto; }
 img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; }
 h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; margin: 0; line-height: 1.1; }
@@ -106,7 +111,8 @@ figure { margin: 0; }
 .nav a:hover, .nav a[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 2px; text-underline-offset: 6px; }
 .nav .nav-rsvp { background: var(--olive); color: var(--ivory); padding: 8px 20px; text-decoration: none !important; }
 .nav .nav-rsvp:hover, .nav .nav-rsvp[aria-current="page"] { background: var(--plum); }
-.faq-link { margin-left: auto; font-size: 14px; text-decoration: none; font-weight: 500; letter-spacing: .06em; padding: 6px 14px; border: 1px solid var(--gold); }
+.top-links { margin-left: auto; display: flex; gap: 8px; }
+.faq-link { font-size: 14px; text-decoration: none; font-weight: 500; letter-spacing: .06em; padding: 6px 14px; border: 1px solid var(--gold); }
 .faq-link:hover, .faq-link[aria-current="page"] { background: var(--gold); color: var(--ivory); }
 .nav .nav-faq { display: none; }
 .menu-toggle, .menu-btn { display: none; }
@@ -142,7 +148,7 @@ figure { margin: 0; }
 .story-text .signoff { font-family: var(--script); font-size: 40px; color: var(--gold); margin: 6px 0 0; line-height: 1.2; }
 
 .milestones { padding: 24px 0 88px; }
-.milestones ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--gold); }
+.milestones ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--gold); }
 .milestones li { padding: 26px 22px 0 0; position: relative; }
 .milestones li::before { content: ""; position: absolute; top: -6px; left: 0; width: 11px; height: 11px; border-radius: 50%; background: var(--gold); }
 .milestones .m-num { display: block; font-family: var(--serif); font-style: italic; color: var(--coral); font-size: 15px; margin-bottom: 6px; }
@@ -371,6 +377,10 @@ figure { margin: 0; }
 .card-foot .drive { margin-top: 0; padding-top: 0; }
 .card-foot .links { margin-top: 0; }
 .row-more { margin-top: 22px; text-align: center; }
+.stay-grid #airbnb-more { order: 99; margin-top: 10px; }
+/* two columns: the button sits under the Airbnb column, clear of the divider line */
+.stay-grid:not(.is-one) #airbnb-more { width: calc(50% - 32px); }
+.stay-grid.is-empty { margin-top: 26px; }
 
 /* ---------- Small cards ("More" opens the description and links) ---------- */
 .card.mini .card-photo { aspect-ratio: 16 / 10; }
@@ -383,6 +393,9 @@ figure { margin: 0; }
 .card.mini h5 { font-size: 16.5px; line-height: 1.22; margin: 1px 0 2px; }
 .card.mini .meta { font-size: 12px; }
 .card.mini .drive { margin-top: 0; padding-top: 0; font-size: 12px; }
+.card .price { margin: 2px 0 0; font-size: 12.5px; font-weight: 600; color: var(--plum); }
+.card .price.is-na { font-weight: 400; font-style: italic; color: var(--olive); }
+.leaflet-popup-content .pop-price { margin: 2px 0 0; font-size: 13px; font-weight: 600; color: var(--plum); }
 .card.mini .tag { font-size: 11.5px; font-weight: 500; color: var(--coral); }
 .card.mini .links { margin-top: 2px; gap: 4px 12px; font-size: 12.5px; }
 .card.mini .links a::after { font-size: 11px; }
@@ -625,12 +638,48 @@ fieldset.field { border: 0; margin: 0 0 22px; padding: 0; min-width: 0; }
 .choice, .field > label.choice { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 400; margin: 6px 0; cursor: pointer; }
 .choice input { accent-color: var(--olive); width: 16px; height: 16px; }
 .other-box { margin: 6px 0 0 26px; max-width: 420px; }
+.step-note { font-size: 15px; color: var(--olive); margin-bottom: 16px; }
+.rsvp-hello { margin: 26px 0 16px; font-family: var(--serif); font-size: 23px; color: var(--plum); }
+.link-btn { margin-left: 6px; padding: 0; border: 0; background: none; font: inherit; font-family: var(--sans); font-size: 14px; color: var(--olive); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.link-btn:hover { color: var(--coral); }
+.field input[readonly] { background: rgba(245, 197, 177, .35); }
+.field-note { font-size: 14px; margin: -2px 0 6px; }
+.plus-one-name { margin: 10px 0 0 30px; }
+.plus-one-name .field { margin-bottom: 14px; }
+/* ---------- Contact ---------- */
+.contact-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; max-width: 920px; padding-bottom: 80px; }
+.contact-card { display: flex; flex-direction: column; padding: 30px 32px 32px; border: 1px solid var(--gold); background: rgba(252, 183, 128, .14); box-shadow: var(--shadow); }
+.contact-card .btn-row { margin-top: auto; }
+.contact-card .eyebrow { color: var(--coral); margin-bottom: 8px; }
+.contact-card h3 { font-size: clamp(28px, 3vw, 34px); color: var(--gold); margin-bottom: 18px; }
+.contact-list { list-style: none; margin: 0 0 22px; padding: 0; }
+.contact-list li { display: flex; align-items: center; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--blush); font-size: 16px; }
+.contact-list li:last-child { border-bottom: 0; }
+.contact-list svg { flex: none; color: var(--olive); }
+.contact-list a { text-decoration: none; overflow-wrap: anywhere; }
+.contact-list a:hover { color: var(--coral); text-decoration: underline; }
 .form-status { margin-top: 16px; font-size: 14px; font-weight: 500; padding: 10px 14px; border-left: 4px solid var(--coral); background: var(--blush); }
-.thanks-page { min-height: 62vh; display: grid; place-items: center; text-align: center; padding: 64px 0 96px; }
-.thanks-card { max-width: 640px; margin-inline: auto; }
-.thanks-card h2 { margin-bottom: 18px; }
-.thanks-card p { font-size: 18px; margin-bottom: 14px; }
-.thanks-card .btn-row { justify-content: center; margin-top: 26px; }
+.thanks-page { min-height: 62vh; display: grid; place-items: center; text-align: center; padding: 72px 0 104px; }
+/* a framed card: gold border with a thin inner line, like an invitation */
+.thanks-card { width: 100%; max-width: 680px; margin-inline: auto; padding: 56px 56px 50px; background: rgba(252, 183, 128, .12);
+  border: 1px solid var(--gold); outline: 1px solid rgba(194, 145, 51, .45); outline-offset: -11px; box-shadow: var(--shadow); }
+.thanks-card .eyebrow { color: var(--coral); letter-spacing: .24em; margin-bottom: 4px; }
+.thanks-title { font-size: clamp(52px, 7vw, 78px); line-height: 1.12; color: var(--gold); margin-bottom: 12px; }
+.thanks-msg { max-width: 470px; margin: 0 auto; font-family: var(--serif); font-style: italic; font-size: 21px; line-height: 1.5; }
+.thanks-card .divider { width: 100%; margin: 22px auto 24px; }
+.thanks-plus { display: inline-flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 12px; margin: 0 0 20px;
+  padding: 9px 10px 9px 22px; border: 1px dashed var(--gold); border-radius: 999px; background: rgba(245, 197, 177, .45); font-size: 16px; font-weight: 500; }
+.thanks-plus a { padding: 6px 18px; border-radius: 999px; background: var(--plum); color: var(--ivory); font-size: 14px; text-decoration: none; transition: background .2s; }
+.thanks-plus a:hover { background: var(--coral); }
+.thanks-more { max-width: 520px; margin: 0 auto; font-size: 15px; opacity: .85; }
+.thanks-card .btn-row { justify-content: center; margin-top: 24px; }
+@media (max-width: 600px) {
+  .thanks-page { padding: 40px 0 72px; }
+  .thanks-card { padding: 40px 24px 36px; outline-offset: -8px; }
+  .thanks-msg { font-size: 19px; }
+  .thanks-plus { padding: 12px 16px; border-radius: 20px; }
+  .thanks-card .btn-row .btn { min-width: 220px; text-align: center; }
+}
 
 /* ---------- Smaller screens ---------- */
 /* the filter buttons get a little smaller so they still fit on one line */
@@ -660,14 +709,16 @@ fieldset.field { border: 0; margin: 0 0 22px; padding: 0; min-width: 0; }
   #stay .row-track { grid-auto-columns: 206px; }
   .tips { grid-template-columns: minmax(0, 1fr); gap: 16px; }
   .inn-feature { grid-template-columns: minmax(0, 1fr); }
-  .inn-feature figure { min-height: 0; aspect-ratio: 3 / 2; }
+  .inn-feature figure { min-height: 0; }
+  .inn-feature figure img { position: relative; inset: auto; display: block; height: auto; aspect-ratio: 3 / 2; }
 }
 @media (max-width: 1020px) and (min-width: 861px) {
   .logo span { display: none; }
 }
 @media (max-width: 860px) {
   .menu-btn { display: block; font-size: 26px; line-height: 1; cursor: pointer; padding: 6px; margin-left: auto; }
-  .faq-link { display: none; }
+  .top-links { display: none; }
+  .contact-grid { grid-template-columns: minmax(0, 1fr); gap: 20px; max-width: 560px; }
   .nav {
     display: none;
     position: absolute; top: var(--header); left: 0; right: 0;
@@ -694,8 +745,11 @@ fieldset.field { border: 0; margin: 0 0 22px; padding: 0; min-width: 0; }
   .map, #stay-map { height: 420px; }
   .tips ul { grid-template-columns: minmax(0, 1fr); }
   .duo { grid-template-columns: minmax(0, 1fr); gap: 22px; }
-  /* stacked: each town's Airbnbs, then its hotels */
-  .sg-row { grid-template-columns: minmax(0, 1fr); row-gap: 18px; }
+  /* stacked: all the Airbnbs first, then all the hotels */
+  .stay-grid .sg-row { display: contents; }
+  .stay-grid .sg-cell[data-kind="hotel"] { order: 2; }
+  .stay-grid #airbnb-more, .stay-grid:not(.is-one) #airbnb-more { order: 1; width: auto; margin: 0 0 8px; }
+  .stay-grid .col-title.sg-cell[data-kind="hotel"] { margin-top: 22px; }
   .stay-grid:not(.is-one)::before { display: none; }
   #stay .row.is-feature .row-track { grid-auto-columns: 206px; }
 }
@@ -733,6 +787,12 @@ fieldset.field { border: 0; margin: 0 0 22px; padding: 0; min-width: 0; }
   #stay .row-track, #stay .row.is-feature .row-track { grid-auto-columns: 72%; }
   .notice-quote { margin-bottom: 48px; }
   .holiday-note { gap: 9px; padding: 5px 15px 5px 6px; }
+  .subnav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 360px; margin-inline: auto; }
+  .subnav a { padding: 10px 8px; text-align: center; }
+  .contact-card { padding: 24px 22px 26px; }
+  .contact-card .btn-row { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 8px; }
+  .contact-card .btn-row .btn { padding: 11px 4px; font-size: 15px; text-align: center; }
+  .plus-one-name { margin-left: 0; }
   /* phones: easy taps and no zooming into the form */
   .field input[type="text"], .field input[type="email"], .field textarea, .field select { font-size: 16px; }
   .choice, .field > label.choice { min-height: 44px; margin: 0; padding: 4px 0; font-size: 16px; }

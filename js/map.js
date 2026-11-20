@@ -651,6 +651,12 @@
     const filterEl = document.getElementById("stay-filters");
     if (!mapEl && !gridEl) return;
     const link = (s) => `https://www.airbnb.com/rooms/${s.id}?check_in=${STAY_DATES.checkin}&check_out=${STAY_DATES.checkout}`;
+    // estimated price per night (see places.js); hotels without one say so
+    const priceText = (x) => x.price
+      ? `&asymp; $${x.price.toLocaleString("en-US")} a night` + (x.min ? ` &middot; ${x.min}-night minimum` : "")
+      : x.priceNote ? "2027 rates not posted yet" : "";
+    const priceLine = (x) => priceText(x) ? `<p class="price${x.price ? "" : " is-na"}">${priceText(x)}</p>` : "";
+    const popPrice = (x) => priceText(x) ? `<p class="pop-price">${priceText(x)}</p>` : "";
     const hotels = typeof HOTELS === "undefined" ? [] : HOTELS;
     STAYS.forEach((s, i) => { s.num = i + 1; s.kind = "airbnb"; });
     let n = STAYS.length;
@@ -660,7 +666,7 @@
     const scope = document.getElementById("stay") || document;
     const TOP = "cayuta";   // highlighted on top: the homes steps from the Inn
 
-    // Opening a town opens it in both columns, so Ithaca's Airbnbs and hotels stay side by side.
+    // Each town row opens on its own (a town filter opens that town's Airbnbs and hotels together).
     const rows = [];   // {el, kind, area}
     function setOpen(r, open) {
       r.el.classList.toggle("is-open", open);
@@ -674,7 +680,7 @@
     // a pin lights up its card: open the card's town first
     function revealCard(card) {
       const r = rows.find((x) => x.el.contains(card));
-      if (r && !r.el.classList.contains("is-open")) openArea(r.area);
+      if (r && !r.el.classList.contains("is-open")) setOpen(r, true);
       revealInRow(card);
     }
 
@@ -685,9 +691,9 @@
       items = addPins(map, pinned, (x) => areaOf(x).color, (x) =>
         x.kind === "airbnb"
           ? `<strong>${esc(x.name)}</strong><span class="pop-cat">Airbnb &middot; ${esc(x.type)}</span><p>${esc(x.beds)}</p>` +
-            `<p class="pop-drive">${fromInn(x.mins)}</p><p class="pop-links"><a href="${link(x)}" ${ext}>View on Airbnb</a></p>`
+            `<p class="pop-drive">${fromInn(x.mins)}</p>${popPrice(x)}<p class="pop-links"><a href="${link(x)}" ${ext}>View on Airbnb</a></p>`
           : `<strong>${esc(x.name)}</strong><span class="pop-cat">Hotel &middot; ${esc(x.where)}</span>` +
-            `<p class="pop-drive">${fromInn(x.mins)}</p>` +
+            `<p class="pop-drive">${fromInn(x.mins)}</p>${popPrice(x)}` +
             `<p class="pop-links"><a href="${phone(x.phone)}">${esc(x.phone)}</a>` +
             (x.web ? `<a href="${x.web}" ${ext}>Website</a>` : `<a href="${gmaps(x)}" ${ext}>Google Maps</a>`) + "</p>",
         (x) => x.kind === "hotel"
@@ -728,7 +734,7 @@
           media: art(s),
           kicker: s.type,
           title: s.name,
-          lines: [`<p class="meta">${esc(s.beds)}</p>`, `<p class="drive">${short(s.mins)}</p>`],
+          lines: [`<p class="meta">${esc(s.beds)}</p>`, `<p class="drive">${short(s.mins)}</p>`, priceLine(s)],
           foot: `<a class="go" href="${link(s)}" ${ext}>View on Airbnb</a>`,
           more: `<p class="note">${esc(s.note)}</p>` + (map ? '<p class="links"><button type="button" class="show-on-map">Show on map</button></p>' : ""),
         });
@@ -761,7 +767,7 @@
           media: art(h),
           kicker: h.where,
           title: h.name,
-          lines: h.mins ? [`<p class="drive">${short(h.mins)}</p>`] : [],
+          lines: (h.mins ? [`<p class="drive">${short(h.mins)}</p>`] : []).concat(priceLine(h) ? [priceLine(h)] : []),
           foot: h.phone
             ? `<a class="tel" href="${phone(h.phone)}">${PHONE_ICON}${esc(h.phone)}</a>`
             : `<a class="go" href="${h.web}" ${ext}>${esc(h.webLabel || "Website")}</a>`,
@@ -801,7 +807,7 @@
 
     rows.forEach((r) => {
       setOpen(r, r.area === TOP);
-      r.el.querySelector(".row-toggle").addEventListener("click", () => openArea(r.area, !r.el.classList.contains("is-open")));
+      r.el.querySelector(".row-toggle").addEventListener("click", () => setOpen(r, !r.el.classList.contains("is-open")));
     });
 
     // Filters: All · Airbnbs · Hotels · one per town. The first three keep the Cayuta Lake homes
@@ -816,12 +822,12 @@
       const shown = { airbnb: false, hotel: false };
       rows.forEach((r) => { if (!r.el.hidden && r.area !== TOP) shown[r.kind] = true; });
       if (gridEl) {
-        gridEl.hidden = !shown.airbnb && !shown.hotel;
         gridEl.classList.toggle("is-one", !(shown.airbnb && shown.hotel));
+        gridEl.classList.toggle("is-empty", !shown.airbnb && !shown.hotel);
         gridEl.querySelectorAll(".sg-cell").forEach((c) => {
           c.hidden = !shown[c.dataset.kind] || (!c.classList.contains("col-title") && !c.querySelector(".row:not([hidden])"));
         });
-        gridEl.querySelectorAll(".sg-row:not(.sg-head)").forEach((line) => { line.hidden = ![...line.children].some((c) => !c.hidden); });
+        gridEl.querySelectorAll(".sg-row").forEach((line) => { line.hidden = ![...line.children].some((c) => !c.hidden); });
       }
       if (featureEl) featureEl.hidden = !rows.some((r) => r.area === TOP && !r.el.hidden);
       if (moreEl) moreEl.hidden = !(f === "all" || f === "airbnb" || STAYS.some((s) => s.area === f));

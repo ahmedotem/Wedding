@@ -1,9 +1,10 @@
 // Personalizes the thank-you page after an RSVP is sent.
 (function () {
-  let name = "", attending = "";
+  let name = "", attending = "", guest = "";
   try {
     name = sessionStorage.getItem("rsvpName") || "";
     attending = sessionStorage.getItem("rsvpAttending") || "";
+    guest = sessionStorage.getItem("rsvpGuest") || "";
   } catch (_) { /* storage unavailable */ }
   const nameEl = document.querySelector("[data-name]");
   const msgEl = document.querySelector("[data-message]");
@@ -14,4 +15,7 @@
         ? "We'll miss you, and we're grateful you let us know."
         : "We can't wait to celebrate with you by the lake on September 4, 2027.";
   }
+  // the "+1? contact us" line is for guests who are coming without one
+  const plusEl = document.querySelector("[data-plus-one]");
+  if (plusEl && (attending === "No" || guest === "Yes")) plusEl.hidden = true;
 })();
