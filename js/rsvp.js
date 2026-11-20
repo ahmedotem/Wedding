@@ -2,7 +2,7 @@
 // "/api/rsvp" saves each RSVP as a new row in  rsvp-responses/RSVP responses.xlsx  on this computer.
 // For that to work, open the site with "Start Website.command" (not by double-clicking the HTML file).
 // Later this can be switched to Google Sheets by changing this one line.
-const RSVP_ENDPOINT = "/api/rsvp";
+const RSVP_ENDPOINT = "https://script.google.com/macros/s/AKfycbyWskjXRYLOJnfvJqlJwGZv1dVhupgXKwM1pLP1xRUIS8Yqp8Gmv9dmNHQ1UfnMfino/exec";
 
 (function () {
   const form = document.getElementById("rsvp-form");
@@ -49,7 +49,7 @@ const RSVP_ENDPOINT = "/api/rsvp";
     try {
       const res = await fetch(RSVP_ENDPOINT, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
         body: JSON.stringify(data),
       });
       const out = await res.json().catch(() => ({}));
