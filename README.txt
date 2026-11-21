@@ -32,7 +32,7 @@ weekend.html        Wedding Weekend: weekend at a glance, wedding-day schedule, 
                     the water, Waterfalls & outdoors, Restaurants, Wineries & breweries, Shopping &
                     markets, Museums & rainy days; each shows three places, "Show more" opens the
                     rest, and "More" on a card opens its description and links)
-gallery.html        All 74 engagement photos (tap to see full size)
+gallery.html        All 100 engagement photos (tap to see full size)
 registry.html       Registry (links to Zola)
 rsvp.html           RSVP form (deadline June 1, 2027): guests start with their name, which is
                     looked up on the guest list; guests with a plus-one are asked about a guest.
